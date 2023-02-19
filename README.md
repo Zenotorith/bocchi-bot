@@ -14,7 +14,7 @@ npm install
 After installation finishes follow configuration instructions then run `node index.js` in terminal to start the bot.
 ## ⚙️ Configuration
 Go to `config.json` and edit by following the note:
-```
+``` dotenv config
 PREFIX="Put anything you want as your bot prefix"
 MAIN_COLOR="Put any #HexCode you want for embeds when there isn't any error"
 ERROR_COLOR="Put any #HexCode you want for embeds when there is an error!"
