@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const config = require('../../config.json');
 
 module.exports = {
-  name: "help",
-  aliases: ["h", "cmd", "cmds", "command", "commands"],
+  name: "Help",
+  aliases: ["H", "CMD", "CMDs", "Command", "Commands"],
   description: "Shows This!",
   memberVoice: false,
   botVoice: false,
@@ -19,7 +19,7 @@ module.exports = {
         iconURL: client.user.displayAvatarURL({ size: 1024 })
       })
       .setDescription(client.MessageCommands.map(c => `> \`${config.Prefix}${c.name}\` \`(${c.aliases?.map(a => `${config.Prefix}${a}`)?.join(' / ') || 'No Aliases'})\`\n> *${c.description}*`).join('\n\n'))
-      .setFooter({ text: 'Developed by iTz Arshia#7650 https://github.com/iTzArshia/iTz-DJ' });
+      .setFooter({ text: 'Developed by Veinz' });
 
     return await message.reply({ embeds: [helpEmbed] });
 

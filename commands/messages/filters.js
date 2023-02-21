@@ -3,9 +3,9 @@ const func = require('../../utils/functions');
 const config = require('../../config.json');
 
 module.exports = {
-  name: "filter",
-  aliases: ["f", "mode", "filters"],
-  description: "Changes loop mode",
+  name: "Filter",
+  aliases: ["F", "Mode", "Filters"],
+  description: "Applies different audio filters.",
   memberVoice: true,
   botVoice: true,
   sameVoice: true,
@@ -19,7 +19,7 @@ module.exports = {
 
       const noArgsEmbed = new Discord.EmbedBuilder()
         .setColor(config.ErrorColor)
-        .setDescription('Please enter a valid filter or `OFF`.\n\n**Valid Filters:** `3D` | `BassBoost` | `Echo` | `Karaoke` | `NightCore` | `VaporWave` | `Flanger` | `Gate` | `Haas` | `Reverse` | `Surround` | `Mcompand` | `Phaser` | `Tremolo` | `Earwax`');
+        .setDescription('Please enter a valid filter or `OFF`.\n\n**Valid Filters:** `3D` | `BassBoost` | `Earwax` | `Echo` | `Flanger` | `Gate` | `Haas` | `Karaoke` | `Mcompand` | `NightCore` |  `Phaser` | `Reverse` | `Surround` | `Tremolo` | `VaporWave`');
 
       return await message.reply({ embeds: [noArgsEmbed] });
 

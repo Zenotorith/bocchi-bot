@@ -3,9 +3,9 @@ const func = require('../../utils/functions');
 const config = require('../../config.json');
 
 module.exports = {
-  name: "nowplaying",
-  aliases: ["np", "now", "song", "music", "playing", "current", "nowplay"],
-  description: "Shows the current playing song",
+  name: "NowPlaying",
+  aliases: ["NP", "Now", "Song", "Music", "Playing", "Current"],
+  description: "Shows the current playing song.",
   memberVoice: true,
   botVoice: true,
   sameVoice: true,
@@ -37,7 +37,7 @@ module.exports = {
     });
 
     if (queue.songs[0].dislikes) nowEmbed.addFields({
-      name: '👎🏻 is:',
+      name: '👎🏻 Dislikes:',
       value: `${func.numberWithCommas(queue.songs[0].dislikes)}`,
       inline: true
     });

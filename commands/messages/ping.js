@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
+const os = require('node:os');
 const func = require('../../utils/functions');
 const config = require('../../config.json');
 
 module.exports = {
     name: "Ping",
-    aliases: ["latency"],
+    aliases: ["L", "Latency"],
     description: "Shows the bot\'s latency.",
     memberVoice: false,
     botVoice: false,
@@ -27,12 +28,12 @@ module.exports = {
                 },
                 {
                     name: `💾 Memory:`,
-                    value: `${func.numberWithCommas(Math.round((process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)))}MB`,
+                    value: `${func.numberWithCommas(Math.round((process.memoryUsage().rss / 1024 / 1024)))}/${func.numberWithCommas(Math.round(os.totalmem() / 1024 / 1024))}MB`,
                     inline: true
                 },
                 {
                     name: `⏳ Uptime:`,
-                    value: `<t:${Math.trunc(client.readyTimestamp / 1000)}:D> | <t:${Math.trunc(client.readyTimestamp / 1000)}:R>`,
+                    value: func.timestamp(client.readyTimestamp),
                     inline: false
                 },
             )

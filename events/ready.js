@@ -6,11 +6,11 @@ module.exports = async (client) => {
   await client.user.setPresence({
     activities: [
       {
-        name: `to ${config.Prefix}Play`,
+        name: `${config.Prefix}Play`,
         type: Discord.ActivityType.Listening
       }
     ],
-    status: 'idle'
+    status: 'online'
   });
 
   console.log(`${client.user.tag} is online and ready to play music for you!`);

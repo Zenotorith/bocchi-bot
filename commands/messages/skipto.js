@@ -3,8 +3,8 @@ const config = require('../../config.json');
 
 module.exports = {
   name: "SkipTo",
-  aliases: ["st", "to"],
-  description: "Skips to the provided song id in the queue",
+  aliases: ["ST", "Jump"],
+  description: "Skips to the provided song id in the queue.",
   memberVoice: true,
   botVoice: true,
   sameVoice: true,
@@ -28,7 +28,7 @@ module.exports = {
 
     try {
 
-      await client.distube.jump(message, Number(args[0])).then(async song => {
+      await client.distube.jump(message.guild, Number(args[0])).then(async song => {
 
         const skippedEmbed = new Discord.EmbedBuilder()
           .setColor(config.MainColor)
