@@ -24,5 +24,8 @@ Go to `config.json` and fill out the values:
 ```
 ## 🧠 Run
 After installation finishes run `node register.js` to deploy slash commands and then run `node index.js` in terminal to start the bot.
-⚠️ **Note: Never commit or share your token publicly** ⚠️
 
+
+
+
+⚠️ **Note: Never commit or share your token publicly** ⚠️
