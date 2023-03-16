@@ -1,12 +1,3 @@
-/*
-    Author: iTz Arshia
-    Github: https://github.com/iTzArshia/iTz-DJ
-    Current Version: 1.0.0
-    DiscordJs Version: 14.7.1
-    DisTube Version: 4.0.4
-    @discordjs/voice Version: 0.14.0
-*/
-
 const Discord = require('discord.js');
 const { DisTube } = require('distube');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
